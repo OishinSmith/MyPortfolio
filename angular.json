@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MyPortfolio": {
+    "WebAbode": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/MyPortfolio",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MyPortfolio:build"
+            "browserTarget": "WebAbode:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MyPortfolio:build:production"
+              "browserTarget": "WebAbode:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MyPortfolio:build"
+            "browserTarget": "WebAbode:build"
           }
         },
         "test": {
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MyPortfolio:serve"
+            "devServerTarget": "WebAbode:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MyPortfolio:serve:production"
+              "devServerTarget": "WebAbode:serve:production"
             }
           }
         },
@@ -130,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "MyPortfolio"
+  "defaultProject": "WebAbode"
 }
