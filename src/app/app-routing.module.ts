@@ -13,6 +13,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SocialComponent } from './social/social.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { WrongRouteComponent } from './wrong-route/wrong-route.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,12 @@ const routes: Routes = [
   { path: "The team", component: ThankyouComponent},
   { path: "Portfolio", component: MainPageComponent},
   { path: "Hobbies", component: HobbiesComponent},
+
+  {
+    path        : '**',
+    pathMatch   : 'full',
+    component   : WrongRouteComponent
+  }
 ];
 
 @NgModule({
